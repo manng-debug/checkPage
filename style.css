@@ -1,0 +1,41 @@
+
+body{
+    background-color: whitesmoke;
+    margin: 0;
+}
+.topBTN{
+    position:fixed;
+    background-color: rgb(243, 243, 243);
+    right: 1px;
+    bottom: 1px;
+}
+#titlu{
+    font-weight: bold;
+    font-weight: inherit;
+    margin-top: 1 px;
+    color:rgb(8, 8, 8)
+}
+.hover{
+    position:relative;
+    display:inline-block;
+}
+.hover::before{
+    content: 'salutari';
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+.hover:hover::before{
+    transform:scale(1);
+    transform-origin: bottom left;
+}
+#paragraf{
+    font-family: 'Courier New', Courier, monospace;
+
+}

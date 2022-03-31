@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        *{
+            margin:0
+        }
+        #header{
+            width: 100%;
+             background-color: rgb(216, 231, 245);
+             margin:10px 20px ;
+             
+        }
+        #headerBTNs{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px;
+            margin: auto;
+        }
+        table,td{
+            border-spacing:10px ;
+            border-collapse: separate;
+            border:1px solid black;
+        }
+        .hover{
+    position:relative;
+    display:inline-block;
+}
+    .hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 1s ease-out;
+}
+.hover:hover::before{
+    transform:scale(1);
+    transform-origin: bottom left;
+}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <table id="header"> 
+            <tr > 
+                <td>Pop Popescu Avocatura(placeHolder design)</td>
+                <td id="headerBTNs" class="hover">acasa</td> 
+                <td id="headerBTNs" class="hover">studii</td> 
+                <td id="headerBTNs"  class="hover">experienta</td>
+                <td id="headerBTNs" class="hover">legislatie</td>
+                <td id="headerBTNs" class="hover">contacte</td> 
+            </tr>
+        </table>
+
+
+    </div>
+</body>
+</html>
